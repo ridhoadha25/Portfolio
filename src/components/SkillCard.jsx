@@ -2,17 +2,11 @@ function SkillCard({ skill, index }) {
   return (
     <div
       data-reveal
-      className="skill-card reveal-section group flex aspect-square w-[calc(100%-0.5rem)] justify-self-center flex-col items-center justify-center gap-2 rounded-lg border border-thirdary bg-background/60 p-2 text-center shadow-[0_6px_16px_rgba(15,23,42,0.03)] transition duration-300 hover:-translate-y-0.5 hover:border-text-primary/20 hover:bg-background sm:w-full sm:gap-3 sm:rounded-xl sm:p-3"
+      className="skill-card reveal-section group relative flex min-h-14 items-center overflow-hidden rounded-xl border border-thirdary/80 bg-background/45 px-4 py-3 transition-[background-color,border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-text-primary/25 hover:bg-background"
       style={{ transitionDelay: `${index * 50}ms` }}
     >
-      <img
-        src={skill.image}
-        alt={skill.name}
-        className="skill-icon h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10"
-        loading="lazy"
-      />
-
-      <span className="block max-w-full truncate text-xs font-semibold text-text-primary sm:text-sm">
+      <span className="absolute left-0 top-2 bottom-2 w-0.5 origin-bottom scale-y-0 rounded-full bg-text-primary transition-transform duration-300 group-hover:scale-y-100" />
+      <span className="block truncate text-sm font-semibold tracking-tight text-text-primary transition-transform duration-300 group-hover:translate-x-1">
         {skill.name}
       </span>
     </div>
