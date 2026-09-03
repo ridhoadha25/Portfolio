@@ -7,19 +7,19 @@ const skillGroups = [
   {
     name: "Frontend",
     eyebrow: "Build & ship",
-    description: "Fondasi teknis untuk interface yang cepat, responsif, dan mudah dirawat.",
+    description: "Technical foundations for fast, responsive, and maintainable interfaces.",
     icon: Layers3,
   },
   {
     name: "UI/UX",
     eyebrow: "Shape the experience",
-    description: "Mengubah ide menjadi alur dan visual yang jelas untuk setiap pengguna.",
+    description: "Turning ideas into clear flows and visuals for every user.",
     icon: Palette,
   },
   {
     name: "Tools",
     eyebrow: "Work smarter",
-    description: "Toolkit harian untuk eksplorasi, kolaborasi, dan delivery yang rapi.",
+    description: "Everyday tools for exploration, collaboration, and polished delivery.",
     icon: Wrench,
   },
 ];
@@ -44,7 +44,7 @@ function Skills() {
             return (
               <article
                 key={group.name}
-                className="group/skill rounded-2xl border border-thirdary bg-foreground/75 p-5 shadow-[0_14px_40px_rgba(15,23,42,0.05)] backdrop-blur-sm transition-colors duration-300 hover:border-text-primary/15"
+                className="group/skill rounded-2xl border border-thirdary bg-foreground p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition-colors duration-200 hover:border-text-primary/15"
               >
                 <div className="mb-5 flex items-start justify-between gap-4 border-b border-thirdary pb-5">
                   <div>
@@ -63,8 +63,8 @@ function Skills() {
                 </p>
 
                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-1">
-                  {groupSkills.map((skill, index) => (
-                    <SkillCard key={skill.name} skill={skill} index={index} />
+                  {groupSkills.map((skill) => (
+                    <SkillCard key={skill.name} skill={skill} />
                   ))}
                 </div>
               </article>
