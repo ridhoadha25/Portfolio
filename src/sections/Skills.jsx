@@ -36,7 +36,7 @@ function Skills() {
           />
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-3">
+        <div className="grid gap-4 lg:grid-cols-3">
           {skillGroups.map((group) => {
             const GroupIcon = group.icon;
             const groupSkills = skills.filter((skill) => skill.category === group.name);
@@ -44,7 +44,7 @@ function Skills() {
             return (
               <article
                 key={group.name}
-                className="rounded-2xl border border-thirdary bg-foreground/75 p-5 shadow-[0_14px_40px_rgba(15,23,42,0.05)] backdrop-blur-sm"
+                className="group/skill rounded-2xl border border-thirdary bg-foreground/75 p-5 shadow-[0_14px_40px_rgba(15,23,42,0.05)] backdrop-blur-sm transition-colors duration-300 hover:border-text-primary/15"
               >
                 <div className="mb-5 flex items-start justify-between gap-4 border-b border-thirdary pb-5">
                   <div>
@@ -62,7 +62,7 @@ function Skills() {
                   {group.description}
                 </p>
 
-                <div className="grid grid-cols-2 gap-3 xl:grid-cols-3">
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-1">
                   {groupSkills.map((skill, index) => (
                     <SkillCard key={skill.name} skill={skill} index={index} />
                   ))}
