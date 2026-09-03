@@ -97,7 +97,7 @@ function Navbar() {
         <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex h-12 w-12 items-center justify-center rounded-lg border border-thirdary bg-foreground text-text-primary transition-all duration-200 hover:bg-button-hover active:scale-95"
+            className="flex h-11 w-11 items-center justify-center rounded-lg border border-thirdary bg-foreground text-text-primary transition-colors duration-150 hover:bg-button-hover"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
@@ -109,8 +109,8 @@ function Navbar() {
 
       <div
         id="mobile-navigation"
-        className={`overflow-hidden border-t border-thirdary/70 bg-background/95 px-5 backdrop-blur-xl transition-all duration-300 ease-out md:hidden ${
-          isOpen ? "max-h-96 translate-y-0 py-3 opacity-100" : "pointer-events-none max-h-0 -translate-y-3 py-0 opacity-0"
+        className={`overflow-hidden border-t border-thirdary/70 bg-background px-5 transition-[max-height,opacity] duration-150 ease-out md:hidden ${
+          isOpen ? "max-h-96 py-3 opacity-100" : "pointer-events-none max-h-0 py-0 opacity-0"
         }`}
       >
             <div className="flex flex-col gap-3">
